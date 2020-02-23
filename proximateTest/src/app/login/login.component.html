@@ -1,0 +1,25 @@
+<div > <!-- Login de la app -->
+    <img class="logoColmena" src="https://www.colmenaseguros.com/paginas/landing/cuentanos-tu-idea-de-progreso/images/logo.png" > <!-- Logo colmena -->
+    <br><br>
+    <div class=login>
+        <p class="label">Usuario:</p>
+        <br><br>
+        <input margin=100px #user 
+            value="Introduzca usuario" onclick="this.value=(this.value=='Introduzca usuario')?'':this.value;" (click)="cleanMessage()" 
+            onblur="this.value=(this.value=='')?'Introduzca usuario':this.value;"> <!-- Input para usuario, se tiene text de ayuda-->
+        <br><br>
+        <p class="label">Contraseña:</p>
+        <br><br>
+        <input #password type="password" (click)="cleanMessage()"> <!-- Input tipo contraseña-->
+        <br><br><br>
+        <button class="login" (click)="login(user.value,password.value)" >Loguear</button> <!-- ejecuto función login -->
+        <br><br>
+        <p class="message">{{message}}</p>
+    </div>
+</div>
+<div class="footer">
+    Desarrollador por David Suarez,                  cel. 3192146220
+<br>
+  
+    
+

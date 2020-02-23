@@ -1,0 +1,28 @@
+<div class="contain">
+<div class="contTop">
+    <img class="logoColmena"
+        src="https://www.colmenaseguros.com/paginas/landing/cuentanos-tu-idea-de-progreso/images/logo.png">
+        <p class= "title">Colmena APP</p>
+    <button class="logOut" routerLink="/" (click)="logOut()">Cerrar sesión</button>
+</div>
+<div class="contLeft"> <!-- Menú lateral -->
+    <li *ngFor="let items of itemsMenu">{{items.Name}}</li> <!-- cargo menú lateral del json recibido -->
+</div>
+<div class="contRigth">
+    <div class="grid">
+        <div class="subGrid" *ngFor="let img of productsList"> <!-- cargo lista de productos con imagenes -->
+            <div class="title" [innerHTML]="img.Name">
+                {{img.Name}}
+            </div>
+            <div>
+                <img class="producImages" src="{{img.CardImgUrl}}">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer"> <!-- información de contacto -->
+    Desarrollador por David Suarez, cel. 3192146220
+    <br>
+</div>
+</div>
